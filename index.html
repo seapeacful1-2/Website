@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy International Men’s Day, Love! ♡</title>
+
+<style>
+:root {
+  --wine: #43000d;
+  --gold: #e9c77b;
+  --cream: #fff4df;
+  --paper: #f8ecd6;
+  --shadow: 0 18px 55px #12000688;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--cream);
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    #790f2b 0%,
+    #43000d 48%,
+    #260009 100%
+  );
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.screen {
+  min-height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 18px;
+}
+
+.screen.active {
+  display: flex;
+  animation: fade .8s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.kicker {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e7b96e;
+}
+
+.gold-title {
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: clamp(34px, 7vw, 66px);
+  line-height: 1.12;
+  text-shadow: 0 3px 18px #e3a94c44;
+  margin: 15px 0;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #e8c9b7;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.heart-card {
+  width: 78px;
+  height: 60px;
+  border-radius: 8px;
+  background: #fff0e6;
+  color: #b20e38;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  transform: rotate(-5deg);
+  box-shadow: 0 12px 28px #10000666;
+  margin-bottom: 22px;
+  animation: float 2.6s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-9px) rotate(3deg);
+  }
+}
+
+.main-btn {
+  border: 1px solid #d8b56f;
+  background: linear-gradient(135deg, #9c1838, #5d071b);
+  color: #ffe8bd;
+  padding: 13px 25px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  margin-top: 24px;
+  box-shadow: 0 7px 22px #17000866;
+  transition: .25s;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+.small-note {
+  font-size: 12px;
+  color: #d6aeb0;
+  margin-top: 14px;
+}
+
+.stage {
+  width: min(900px, 94vw);
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* PHONG THU */
+
+.envelope-wrap {
+  position: relative;
+  width: min(330px, 78vw);
+  height: 205px;
+  margin: 35px auto 18px;
+  cursor: pointer;
+  perspective: 900px;
+}
+
+.envelope {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, #790b25, #4b0013);
+  border: 1px solid #8f3040;
+  box-shadow: var(--shadow);
+  overflow: visible;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    140deg,
+    transparent 49.5%,
+    #8d1730 50%,
+    #65051c 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 50% 63%);
+}
+
+.envelope:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(35deg, #520014 0 49.5%, transparent 50%);
+  clip-path: polygon(0 100%, 100% 100%, 50% 47%);
+}
+
+.flap {
+  position: absolute;
+  z-index: 3;
+  inset: 0 0 auto;
+  height: 62%;
+  background: linear-gradient(145deg, #9b1634, #65051c);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 1s;
+}
+
+.seal {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #a92342;
+  border: 2px solid #d7ae67;
+  color: #ffe5a7;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.envelope.open .seal {
+  opacity: 0;
+  transition: .3s;
+}
+
+.paper {
+  position: absolute;
+  z-index: 2;
+  left: 7%;
+  top: 12%;
+  width: 86%;
+  height: 76%;
+  background: var(--paper);
+  color: #6b2432;
+  padding: 20px 17px;
+  transform: translateY(12px);
+  transition: transform 1s .25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.envelope.open .paper {
+  transform: translateY(-92px);
+}
+
+.paper span {
+  font-size: 23px;
+  color: #8d263a;
+}
+
+/* BA HOP QUA */
+
+.card-row {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 35px auto;
+  max-width: 780px;
+}
+
+.choice {
+  width: 190px;
+  min-height: 155px;
+  padding: 22px 15px;
+  border: 1px solid #9b5260;
+  background: linear-gradient(145deg, #651024aa, #35000cbb);
+  border-radius: 9px;
+  box-shadow: 0 12px 30px #16000755;
+  transition: .25s;
+  color: #f7dfc5;
+}
+
+.choice:hover {
+  transform: translateY(-7px);
+  border-color: var(--gold);
+}
+
+.choice .ico {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 13px;
+}
+
+.choice strong {
+  display: block;
+  color: var(--gold);
+  font-size: 19px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.choice small {
+  display: block;
+  font-size: 11px;
+  color: #d7b5b2;
+  margin-top: 9px;
+}
+
+/* LA THU */
+
+.letter {
+  width: min(650px, 94vw);
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--paper) 0 32px,
+    #e6d6bc 33px 34px
+  );
+  color: #6b3039;
+  padding: 38px clamp(22px, 6vw, 55px);
+  text-align: left;
+  box-shadow: var(--shadow);
+  line-height: 1.85;
+  min-height: 390px;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  overflow-wrap: break-word;
+}
+
+.letter h2 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-style: italic;
+  font-weight: normal;
+  color: #8c2639;
+}
+
+.letter p {
+  white-space: pre-line;
+  line-height: 1.9;
+}
+
+.signature {
+  text-align: right;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 22px;
+}
+
+/* PHONG BI CARO */
+
+.check-envelope {
+  width: min(310px, 75vw);
+  height: 230px;
+  position: relative;
+  margin: 25px auto;
+  background: repeating-linear-gradient(
+    45deg,
+    #f7d6d0 0 12px,
+    #fff0e7 12px 24px
+  );
+  box-shadow: var(--shadow);
+  border: 8px solid #fff0e7;
+  display: grid;
+  place-items: center;
+  color: #7d2638;
+  font-size: 22px;
+  font-style: italic;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.check-envelope:hover {
+  transform: translateY(-5px);
+}
+
+.check-envelope:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #e7b9b6aa, #fff5e9aa);
+  clip-path: polygon(0 0, 100% 0, 50% 58%);
+}
+
+.check-envelope span {
+  position: relative;
+  z-index: 1;
+  background: #fff4e8dd;
+  padding: 10px;
+}
+
+/* BO HOA CUOI CUNG */
+
+.bouquet-area {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  animation: flowerReveal 1.2s ease;
+}
+
+@keyframes flowerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bouquet {
+  position: relative;
+  width: min(330px, 90vw);
+  height: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: float 3s ease-in-out infinite;
+}
+
+.bouquet-flowers {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(38px, 9vw, 53px);
+  line-height: 1.25;
+  filter: drop-shadow(0 6px 8px #00000055);
+}
+
+.bouquet-stems {
+  position: absolute;
+  top: 105px;
+  width: 160px;
+  height: 125px;
+  z-index: 1;
+}
+
+.stem {
+  position: absolute;
+  width: 5px;
+  height: 120px;
+  background: linear-gradient(to bottom, #61814a, #25472b);
+  left: 50%;
+  transform-origin: top;
+  border-radius: 10px;
+}
+
+.stem:nth-child(1) {
+  transform: rotate(-25deg);
+}
+
+.stem:nth-child(2) {
+  transform: rotate(-12deg);
+}
+
+.stem:nth-child(3) {
+  transform: rotate(0deg);
+}
+
+.stem:nth-child(4) {
+  transform: rotate(12deg);
+}
+
+.stem:nth-child(5) {
+  transform: rotate(25deg);
+}
+
+.bouquet-wrapper {
+  position: absolute;
+  top: 135px;
+  width: 205px;
+  height: 155px;
+  background: linear-gradient(
+    135deg,
+    #fff1df 0%,
+    #d9b78c 45%,
+    #fff0d9 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 67% 100%, 33% 100%);
+  filter: drop-shadow(0 12px 15px #00000055);
+  z-index: 3;
+}
+
+.bouquet-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #bd9672;
+  transform: rotate(5deg);
+}
+
+.bouquet-ribbon {
+  position: absolute;
+  z-index: 4;
+  top: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 35px;
+  border-radius: 50%;
+  background: #8e1734;
+  border: 2px solid var(--gold);
+  color: #ffe8bd;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+}
+
+.bouquet-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--gold);
+  margin: 5px 0;
+  text-shadow: 0 3px 15px #e9c77b44;
+}
+
+/* THANH NHAC */
+
+.music-widget {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #2b000bdc;
+  border: 1px solid #a87555;
+  border-radius: 40px;
+  padding: 8px 13px 8px 8px;
+  box-shadow: 0 8px 25px #10000688;
+}
+
+.mini-vinyl {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    #161319 0 2px,
+    #55404a 3px 4px
+  );
+  border: 2px solid #c69a5b;
+}
+
+.mini-vinyl.spin {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.music-widget button {
+  border: 0;
+  background: #8e1734;
+  color: #ffe8bd;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+}
+
+.music-label {
+  font-size: 11px;
+  color: #f1d7bd;
+  max-width: 85px;
+}
+
+.back {
+  background: transparent;
+  border: 1px solid #a66b70;
+  color: #f1d6bd;
+  padding: 9px 18px;
+  margin-top: 20px;
+}
+
+.back:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+@media(max-width:520px) {
+  .choice {
+    width: 42%;
+    min-width: 140px;
+  }
+
+  .letter {
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MAN 1: MO DAU -->
+
+<section id="intro" class="screen active">
+
+  <div class="heart-card">♥</div>
+
+  <div class="kicker">A little surprise for you</div>
+
+  <h1 class="gold-title"
+      style="font-size:clamp(27px,5vw,43px)">
+    Một món quà nhỏ dành tặng bạn 🎁
+  </h1>
+
+  <p class="subtitle">
+    Chạm vào đây để mở quà nè...
+  </p>
+
+  <button class="main-btn" onclick="go('anniversary')">
+    MỞ QUÀ ♡
+  </button>
+
+</section>
+
+
+<!-- MAN 2: PHONG THU -->
+
+<section id="anniversary" class="screen">
+
+  <div class="stage">
+
+    <div class="kicker">A special day, a special love</div>
+
+    <h1 class="gold-title">
+      Happy International Men’s Day, Love!
+    </h1>
+
+    <p class="subtitle">
+      Một điều nhỏ bé, dành riêng cho người đặc biệt.
+    </p>
+
+    <div class="envelope-wrap" onclick="openLetter()">
+
+      <div class="envelope" id="envelope">
+
+        <div class="paper">
+          <span>To my love ♡</span>
+        </div>
+
+        <div class="flap"></div>
+
+        <div class="seal">♥</div>
+
+      </div>
+
+    </div>
+
+    <p class="small-note">
+      Nhấn vào phong thư để mở
+    </p>
+
+    <button class="main-btn" onclick="go('gifts')">
+      Tiếp tục
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MAN 3: BA MON QUA -->
+
+<section id="gifts" class="screen">
+
+  <div class="stage">
+
+    <div class="kicker">Made with love</div>
+
+    <h1 class="gold-title">Gifts for you</h1>
+
+    <p class="subtitle">
+      Chọn một món quà để khám phá nhé.
+    </p>
+
+    <div class="card-row">
+
+      <button class="choice" onclick="go('message')">
+        <span class="ico">✉</span>
+        <strong>Message</strong>
+        <small>Một lá thư dành cho bạn</small>
+      </button>
+
+      <button class="choice" onclick="go('memories')">
+        <span class="ico">♡</span>
+        <strong>Memories</strong>
+        <small>Chuyện của tụi mình nè</small>
+      </button>
+
+      <button class="choice" onclick="go('wishes')">
+        <span class="ico">✧</span>
+        <strong>Wishes</strong>
+        <small>Những lời chúc chân thành</small>
+      </button>
+
+    </div>
+
+    <button class="back" onclick="go('anniversary')">
+      ← Quay lại phong thư
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MAN 4: MESSAGE -->
+
+<section id="message" class="screen">
+
+  <div class="letter">
+
+    <h2>Gửi người thương ♡</h2>
+
+    <p>Gửi người em thương,
+
+Có những điều đôi khi thật khó để nói thành lời, nên em muốn viết chúng ra trong lá thư nhỏ này.
+
+Cảm ơn bạn vì đã xuất hiện, vì những khoảnh khắc vui vẻ, những lần sẻ chia và cả những điều giản dị mà chúng ta cùng trải qua. 
+
+Mong rằng trên chặng đường phía trước, chúng ta vẫn sẽ luôn dành cho nhau sự quan tâm, thấu hiểu và thật nhiều yêu thương. 
+
+Mong sau này chúng ta vẫn luôn ở cạnh và đồng hành cùng nhau.</p>
+
+    <div class="signature">
+      Thương và yêu bạn, TH
+    </div>
+
+  </div>
+
+  <button class="back" onclick="go('gifts')">
+    ← Quay lại
+  </button>
+
+</section>
+
+
+<!-- MAN 5: MEMORIES -->
+
+<section id="memories" class="screen">
+
+  <div class="stage">
+
+    <div class="kicker">Our little moments</div>
+
+    <h1 class="gold-title">Memories</h1>
+
+    <div class="letter">
+
+      <h2>Những điều em muốn giữ lại</h2>
+
+      <p>♡ Những cuộc trò chuyện tưởng chừng bình thường nhưng luôn khiến em vui.
+
+♡ Những lần cùng nhau cười thật nhiều, kể nhau nghe những câu chuyện nhỏ.
+
+♡ Những lúc ở cạnh nhau, dù chẳng cần làm điều gì đặc biệt.
+
+♡ Và hơn hết, là cảm giác có một người để quan tâm, sẻ chia và cùng tạo nên những kỷ niệm mới.</p>
+
+    </div>
+
+    <button class="back" onclick="go('gifts')">
+      ← Quay lại
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MAN 6: WISHES -->
+
+<section id="wishes" class="screen">
+
+  <div class="stage">
+
+    <div class="kicker">From the bottom of my heart</div>
+
+    <h1 class="gold-title">My wishes for you</h1>
+
+    <div class="letter">
+
+      <h2>Em mong rằng...</h2>
+
+      <p>✧ Bạn luôn vui vẻ, hạnh phúc, bình an và mạnh khỏe.
+
+✧ Mọi dự định của bạn đều từng bước trở thành hiện thực.
+
+✧ Những ngày mệt mỏi sẽ sớm qua đi, nhường chỗ cho thật nhiều niềm vui.
+
+✧ Bạn luôn cảm nhận được rằng mình xứng đáng được yêu thương và trân trọng.
+
+Và mong rằng chúng ta sẽ còn cùng nhau viết tiếp thật nhiều câu chuyện đẹp.</p>
+
+    </div>
+
+    <button class="main-btn" onclick="go('final')">
+      MÓN QUÀ CUỐI CÙNG ♡
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MAN 7: PHONG BI VA BO HOA -->
+
+<section id="final" class="screen">
+
+  <div class="stage">
+
+    <div class="kicker">One last little surprise</div>
+
+    <h1 class="gold-title">For you, with love</h1>
+
+    <div class="check-envelope" id="finalEnvelope"
+         onclick="revealBouquet()">
+
+      <span>Open when you need a hug ♡</span>
+
+    </div>
+
+    <p class="subtitle" id="finalHint">
+      Chạm vào phong bì để mở món quà cuối cùng
+    </p>
+
+
+    <!-- BO HOA -->
+
+    <div class="bouquet-area" id="bouquetArea">
+
+      <div class="bouquet">
+
+        <div class="bouquet-flowers">
+          🌹 🌹 🌹
+          <br>
+          🌷 🌹 🌷
+        </div>
+
+        <div class="bouquet-stems">
+          <div class="stem"></div>
+          <div class="stem"></div>
+          <div class="stem"></div>
+          <div class="stem"></div>
+          <div class="stem"></div>
+        </div>
+
+        <div class="bouquet-wrapper"></div>
+
+        <div class="bouquet-ribbon">♡</div>
+
+      </div>
+
+      <h2 class="bouquet-title">
+        A bouquet for you ♡
+      </h2>
+
+      <p class="subtitle">
+        Mong rằng bạn luôn rực rỡ và hạnh phúc như những đóa hoa.
+      </p>
+
+      <button class="main-btn" onclick="toggleMusic()">
+        NGHE NHẠC ♡
+      </button>
+
+    </div>
+
+
+    <button class="back" onclick="go('gifts')">
+      ← Xem lại các món quà
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- NHAC NEN -->
+
+<audio id="music" loop preload="auto">
+  <source
+    src="music-for-videos-waiting-in-love-soft-asmr-piano-simple-romance-334237.mp3"
+    type="audio/mpeg">
+</audio>
+
+
+<!-- THANH DIEU KHIEN NHAC -->
+
+<div class="music-widget">
+
+  <div class="mini-vinyl" id="miniVinyl"></div>
+
+  <button
+    id="musicButton"
+    aria-label="Phát hoặc tạm dừng nhạc"
+    onclick="toggleMusic()">
+    ▶
+  </button>
+
+  <span class="music-label" id="musicLabel">
+    Nhạc dành tặng bạn
+  </span>
+
+</div>
+
+
+<script>
+
+/* KHAI BAO */
+
+const audio = document.getElementById('music');
+
+const miniVinyl = document.getElementById('miniVinyl');
+
+const musicButton = document.getElementById('musicButton');
+
+const musicLabel = document.getElementById('musicLabel');
+
+
+/* CHUYEN MAN HINH */
+
+function go(id) {
+
+  const target = document.getElementById(id);
+
+  if (!target) {
+    console.error('Không tìm thấy màn hình:', id);
+    return;
+  }
+
+  document.querySelectorAll('.screen').forEach(screen => {
+    screen.classList.remove('active');
+  });
+
+  target.classList.add('active');
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+}
+
+
+/* MO PHONG THU */
+
+function openLetter() {
+
+  document.getElementById('envelope').classList.toggle('open');
+
+}
+
+
+/* MO BO HOA */
+
+function revealBouquet() {
+
+  const bouquet = document.getElementById('bouquetArea');
+
+  bouquet.style.display = 'flex';
+
+  document.getElementById('finalHint').textContent =
+    'Món quà nhỏ dành riêng cho bạn ♡';
+
+  document.getElementById('finalEnvelope').style.display = 'none';
+
+}
+
+
+/* PHAT VA TAM DUNG NHAC */
+
+async function toggleMusic() {
+
+  if (audio.paused) {
+
+    try {
+
+      await audio.play();
+
+    } catch (error) {
+
+      musicLabel.textContent = 'Không thể phát nhạc';
+
+    }
+
+  } else {
+
+    audio.pause();
+
+  }
+
+}
+
+
+/* DONG BO THANH NHAC */
+
+audio.addEventListener('play', () => {
+
+  miniVinyl.classList.add('spin');
+
+  musicButton.textContent = 'Ⅱ';
+
+  musicLabel.textContent = 'Đang phát nhạc ♡';
+
+});
+
+
+audio.addEventListener('pause', () => {
+
+  miniVinyl.classList.remove('spin');
+
+  musicButton.textContent = '▶';
+
+  musicLabel.textContent = 'Nhạc đã tạm dừng';
+
+});
+
+
+audio.addEventListener('error', () => {
+
+  musicLabel.textContent = 'Không tìm thấy file nhạc';
+
+});
+
+</script>
+
+</body>
+</html>
